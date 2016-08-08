@@ -2,16 +2,19 @@
 <html>
 <head>
   <title>BaseballFactory</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-  <%= javascript_include_tag 'application' %> 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %> 
 </head>
+
 <body ng-app="app">
+  <div class="text-center">
+    <%= render 'layouts/navigation' %>
+     <%= yield %>
+  </div>
 
-<%= yield %>
-
-<footer class="col-md-12 text-center">
-  <small>&cope; 2016 Developed by <a href="https://www.linkedin.com/in/pedro-acosta-280b9910a?trk=nav_responsive_tab_profile"></a></small>
-</footer>
 </body>
+  <footer class="footer text-center">
+    <small>&copy; 2016 Developed by <a href="https://www.linkedin.com/in/pedro-acosta-280b9910a?trk=nav_responsive_tab_profile">Pedro Acosta</a></small>
+  </footer>
 </html>

@@ -1,4 +1,4 @@
-a {
+.division-active {
   text-decoration: none;
   color: white;
   padding: 8px;
@@ -7,4 +7,29 @@ a {
 }
 .active {
   background-color: blue;
+}
+
+.list {
+  padding: 0px;
+}
+
+.flatback {
+  background-color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: black;
+}
+
+small {
+  color: white;
+}
+
+small a{
+  color: white;
 }
