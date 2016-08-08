@@ -1,0 +1,9 @@
+<h2>Divisions</h2>
+
+<ul>
+  <li ng-repeat="division in ctrl.divisions">
+    <h4> {{division.name}} </h4>
+    <a href="#" ui-sref="home.division({id: division.id})">View Division</a>
+    <a href="#" ui-sref="home.edit({id: division.id})">Edit Division</a>
+  </li>
+</ul>

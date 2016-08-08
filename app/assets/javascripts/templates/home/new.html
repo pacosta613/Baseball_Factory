@@ -1,7 +1,8 @@
 <h1>Create Division</h1>
 
-<form>
-  <label for="name">Name</label>
-  <input name="name">
-  <input type="submit" value="Create Division">
+<form validate ng-submit="ctrl.addDivision()">
+   <label>Division</label>
+   <input type="text" ng-model="ctrl.division.name">
+
+   <input type="submit" value="Add Division">
 </form>

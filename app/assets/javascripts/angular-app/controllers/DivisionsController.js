@@ -1,13 +1,8 @@
-function DivisionsController(){
-  var ctrl = this;
+function DivisionsController(Division) {
+  var ctrl = this; 
+  ctrl.divisions = Division.query();
+};
 
-  ctrl.divisions = [{
-      name: 'West'
-    }, {
-      name: 'East'
-    }];
-}
-
-angular
-  .module('app')
+angular 
+  .module('app') 
   .controller('DivisionsController', DivisionsController);
