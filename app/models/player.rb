@@ -1,5 +1,5 @@
 class Player < ActiveRecord::Base
-  attr_accessible :first_name, :last_name
+  attr_accessor :first_name, :last_name
 
   belongs_to :team
   has_many :statistics
