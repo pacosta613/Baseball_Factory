@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+west = Division.create(name: 'West')
+east = Division.create(name: 'East')
+north = Division.create(name: 'North')
+south = Division.create(name: 'South')
