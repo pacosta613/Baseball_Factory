@@ -10,7 +10,7 @@ angular
      .state("league.new", {
        url: "new",
        templateUrl: "division/new.html",
-       controller: 'NewDivisionController as ctrl'
+       controller: 'DivisionsController as ctrl'
      })
      .state("league.divisions", {
        url: "divisions",
@@ -20,12 +20,17 @@ angular
      .state("league.division", {
         url: 'division/:id',
         templateUrl: 'division/show.html',
-        controller: "ViewDivisionController as ctrl"
+        controller: "DivisionsController as ctrl"
      })
      .state("league.edit", {
         url: 'edit/:id',
         templateUrl: 'division/edit.html',
-        controller: 'EditDivisionController as ctrl'
+        controller: 'DivisionsController as ctrl'
+     })
+     .state('league.teams', {
+        url: "teams",
+        templateUrl: 'team/teams.html',
+        controller: 'TeamsController as ctrl'
      });
 
   $urlRouterProvider.otherwise("/");

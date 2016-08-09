@@ -3,8 +3,8 @@
 <ul class="list">
   <li ng-repeat="division in ctrl.divisions">
     <h4> {{division.name}} </h4>
-    <a class="division-active" href="#" ui-sref="home.division({id: division.id})">View Division</a>
-    <a class="division-active" href="#" ui-sref="home.edit({id: division.id})">Edit Division</a>
+    <a class="division-active" href="#" ui-sref="league.division({id: division.id})">View Division</a>
+    <a class="division-active" href="#" ui-sref="league.edit({id: division.id})">Edit Division</a>
     <a class="division-active" href ng-click="ctrl.deleteDivision(division)">Delete Note</a> 
   </li>
 </ul>
