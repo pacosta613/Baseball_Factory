@@ -2,29 +2,29 @@ angular
  .module("app", ["ui.router", "ngResource", "templates"])
  .config(function($stateProvider, $urlRouterProvider) {
    $stateProvider
-     .state("home", {
+     .state("league", {
        url: "/",
        templateUrl: "home.html",
-       controller: "HomeController as ctrl"
+       controller: "LeagueController as ctrl"
      })
-     .state("home.new", {
+     .state("league.new", {
        url: "new",
-       templateUrl: "home/new.html",
+       templateUrl: "division/new.html",
        controller: 'NewDivisionController as ctrl'
      })
-     .state("home.divisions", {
+     .state("league.divisions", {
        url: "divisions",
-       templateUrl: "home/divisions.html",
+       templateUrl: "division/divisions.html",
        controller: "DivisionsController as ctrl"
      })
-     .state("home.division", {
+     .state("league.division", {
         url: 'division/:id',
-        templateUrl: 'home/show.html',
+        templateUrl: 'division/show.html',
         controller: "ViewDivisionController as ctrl"
      })
-     .state("home.edit", {
+     .state("league.edit", {
         url: 'edit/:id',
-        templateUrl: 'home/edit.html',
+        templateUrl: 'division/edit.html',
         controller: 'EditDivisionController as ctrl'
      });
 
