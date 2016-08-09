@@ -19,4 +19,8 @@ class Player < ActiveRecord::Base
     end
   end
 
+  def as_json(options = {})
+    super(options.merge(include: [:team, :statistics]))
+  end
+
 end
