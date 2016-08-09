@@ -5,7 +5,9 @@ module Api
     respond_to :json
 
     def index
-      respond_with(Player.all)
+      @team = Team.find(params[:team_id])
+      @players = @team.players 
+      respond_with @team, @players
     end
 
     def create

@@ -5,7 +5,9 @@ module Api
     respond_to :json
 
     def index
-      respond_with(Team.all)
+      @division = Division.find(params[:division_id])
+      @teams = @division.teams  
+      respond_with @division, @teams
     end
 
     def create
