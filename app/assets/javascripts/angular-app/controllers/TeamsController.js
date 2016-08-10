@@ -1,7 +1,8 @@
-function TeamsController(Team, $location, $state, $stateParams) {
+function TeamsController(Team, Teams, $location, $state, $stateParams) {
   var ctrl = this; 
   ctrl.teams = Team.query();
   ctrl.newTeam = new Team();
+  ctrl.allTeams = Teams.query();
   ctrl.team = Team.get({id: $stateParams.id});
 
   ctrl.addTeam = function(){

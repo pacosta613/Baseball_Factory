@@ -6,7 +6,11 @@
   border: solid 2px black;
 }
 .team-active {
-  padding: 0px;
+  padding: 8px;
+  background-color: green;
+  border: solid 2px black;
+  text-decoration: none;
+  color: white;
 }
 .active {
   background-color: blue;
