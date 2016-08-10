@@ -1,0 +1,10 @@
+<h2>Teams</h2>
+
+<ul class="list">
+  <li ng-repeat="team in ctrl.teams">
+    <h4> {{team.name}} </h4>
+    <a class="team-active" href="#" ui-sref="league.team({id: team.id})">View Team</a>
+    <a class="team-active" href="#" ui-sref="league.edit-team({id: team.id})">Edit Team</a>
+    <a class="team-active" href ng-click="ctrl.deleteTeam(team)">Delete Team</a> 
+  </li>
+</ul>

@@ -27,7 +27,7 @@ module Api
     end
 
     def show
-      respond_with(Division.find(params[:id]))
+      respond_with(Division.find_by(params[:division_id]))
     end
 
     def destroy

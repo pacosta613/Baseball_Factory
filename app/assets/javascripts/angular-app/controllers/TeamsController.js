@@ -1,6 +1,20 @@
-function TeamsController(Team, $location, $state) {
+function TeamsController(Team, $location, $state, $stateParams) {
   var ctrl = this; 
   ctrl.teams = Team.query();
+  ctrl.newTeam = new Team();
+  ctrl.team = Team.get({id: $stateParams.id});
+
+  ctrl.addTeam = function(){
+    ctrl.newTeam.$save(function(){
+      $location.path('teams');
+    });
+  };
+
+  ctrl.editTeam = function(){
+    ctrl.team.$update(function(){
+      $location.path('teams');
+    });
+  };
 
   ctrl.deleteTeam = function(team){
     team.$delete(function(){

@@ -27,15 +27,29 @@ angular
         templateUrl: 'division/edit.html',
         controller: 'DivisionsController as ctrl'
      })
-     .state('league.teams', {
+     .state('league.division.teams', {
         url: "teams",
         templateUrl: 'team/teams.html',
         controller: 'TeamsController as ctrl'
+     })
+     .state('league.new-team', {
+      url: 'new-team',
+      templateUrl: 'team/new.html',
+      controller: 'TeamsController as ctrl'
+     })
+     .state('league.edit-team', {
+      url: 'edit-team',
+      templateUrl: 'team/edit.html',
+      controller: 'TeamsController as ctrl'
+     })
+     .state('league.team', {
+      url: 'team',
+      templateUrl: 'team/show.html',
+      controller: 'TeamsController as ctrl'
      })
      .state('league.about', {
       url: 'about',
       templateUrl: 'about/about.html'
      });
-
   $urlRouterProvider.otherwise("/");
 });
