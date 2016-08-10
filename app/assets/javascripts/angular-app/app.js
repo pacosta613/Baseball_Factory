@@ -31,6 +31,10 @@ angular
         url: "teams",
         templateUrl: 'team/teams.html',
         controller: 'TeamsController as ctrl'
+     })
+     .state('league.about', {
+      url: 'about',
+      templateUrl: 'about/about.html'
      });
 
   $urlRouterProvider.otherwise("/");
