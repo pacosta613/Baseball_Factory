@@ -46,10 +46,7 @@ module Api
     def find_division_team
       @team = @division.teams.find(params[:id])
     end
-
-    def division_team_response
-      respond_with @division, @team
-    end
+    
   end
 
 end

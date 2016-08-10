@@ -25,11 +25,12 @@ function DivisionsController(Division, $location, $state, $stateParams, Team) {
 
   ctrl.addTeam = function(team, division){
     team.division_id = division.id;
-    team.$save(function(response){
-      console.log(response);
+    team.$save(function(){
+      //console.log(response);
+      $location.path('divisions')
     });
-    ctrl.team = new Team();
-    $state.go($state.current, {}, {reload: true});
+    //ctrl.team = new Team();
+    //$state.go($state.current, {}, {reload: true});
   };
 
 };
