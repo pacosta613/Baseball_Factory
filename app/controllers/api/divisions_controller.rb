@@ -26,7 +26,7 @@ module Api
 
     def show
       @team = Team.new
-      @division = Division.find(params[:id])
+      @division = Division.find_by(params[:division_id])
       @teams = @division.teams
       respond_with(@division)
     end
