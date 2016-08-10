@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :statistics
+  namespace :api, defaults:{:format => :json} do
+    resources :divisions, :teams, :players, :statistics
+  end
 
 end
