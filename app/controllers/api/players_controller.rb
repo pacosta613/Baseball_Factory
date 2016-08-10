@@ -1,9 +1,7 @@
 module Api
   
   class PlayersController < ApplicationController
-    skip_before_filter :verify_authenticity_token
-    respond_to :json
-
+    
     def index
       @team = Team.find(params[:team_id])
       @players = @team.players 

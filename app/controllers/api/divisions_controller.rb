@@ -1,8 +1,6 @@
 module Api
 
   class DivisionsController < ApplicationController
-    skip_before_filter :verify_authenticity_token
-    respond_to :json
 
     def index
       respond_with(Division.all)
@@ -28,6 +26,7 @@ module Api
 
     def show
       respond_with(Division.find_by(params[:division_id]))
+
     end
 
     def destroy

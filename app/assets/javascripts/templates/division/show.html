@@ -2,3 +2,16 @@
 
 <a class="division-active" href="#" ui-sref="league.edit({id: ctrl.division.id})">Edit Division</a>
 <a class="division-active" href="#" ng-click="ctrl.deleteDivision(ctrl.division)">Delete Division</a> 
+
+<h2>Teams</h2>
+
+
+
+<h1>Create Team</h1>
+
+<form validate ng-submit="ctrl.addTeam(ctrl.team, ctrl.division)">
+   <label>Team</label>
+   <input type="text" ng-model="ctrl.team.name">
+
+   <input type="submit" value="Add Team">
+</form>

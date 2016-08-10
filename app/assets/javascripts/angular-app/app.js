@@ -27,7 +27,7 @@ angular
         templateUrl: 'division/edit.html',
         controller: 'DivisionsController as ctrl'
      })
-     .state('league.division.teams', {
+     .state('league.teams', {
         url: "teams",
         templateUrl: 'team/teams.html',
         controller: 'TeamsController as ctrl'

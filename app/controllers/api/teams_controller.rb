@@ -1,45 +1,47 @@
 module Api
   
   class TeamsController < ApplicationController
-    skip_before_filter :verify_authenticity_token
-    respond_to :json
+    before_action :find_division
+    before_action :find_division_team, only: [:show, :update, :destroy]
+    before_action :division_team_response, except: [:index]
 
     def index
-      @division = Division.find(params[:division_id])
       @teams = @division.teams  
       respond_with @division, @teams
     end
 
     def create
-      @team = Team.new(team_params)
-      if @team.save
-        respond_to do |f|
-          f.json {render :json => @team}
-        end
-      end
+      @team = @division.teams.create(team_params)
+      respond_with @division, @team      
     end
 
     def show
-      respond_with(Team.find(params[:id]))
     end
 
     def update
-      @team = Team.find(params[:id])
-      if @team.update(team_params)
-        respond_to do |f|
-          f.json {render :json => @team}
-        end
-      end
+      @team.update(team_params)
     end
 
     def destroy
-      respond_with(Team.destroy(params[:id]))
+      respond_with @team.destroy
     end
 
     private
 
     def team_params
       params.require(:team).permit(:name, :division_id)
+    end
+
+    def find_division
+      @division = Division.find(params[:division_id])
+    end
+
+    def find_division_team
+      @team = @division.teams.find(params[:id])
+    end
+
+    def division_team_response
+      respond_with @division, @team
     end
   end
 
