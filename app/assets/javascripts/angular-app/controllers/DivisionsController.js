@@ -2,7 +2,7 @@ function DivisionsController(Division, $location, $state, $stateParams, Team) {
   var ctrl = this; 
   ctrl.divisions = Division.query();
   ctrl.newDivision = new Division();
-  ctrl.newTeam = new Team();
+  ctrl.team = new Team();
   ctrl.division = Division.get({id: $stateParams.id});
 
   ctrl.deleteDivision = function(division){

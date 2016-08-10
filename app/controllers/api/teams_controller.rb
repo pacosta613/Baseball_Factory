@@ -12,14 +12,16 @@ module Api
 
     def create
       @team = @division.teams.create(team_params)
-      respond_with @division, @team      
+      division_team_response
     end
 
     def show
+      division_team_response
     end
 
     def update
       @team.update(team_params)
+      division_team_response
     end
 
     def destroy

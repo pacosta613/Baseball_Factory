@@ -25,8 +25,10 @@ module Api
     end
 
     def show
+      @team = Team.new
+      @division = Division.find(params[:id])
+      @teams = @division.teams
       respond_with(Division.find_by(params[:division_id]))
-
     end
 
     def destroy
