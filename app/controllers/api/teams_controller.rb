@@ -12,16 +12,13 @@ module Api
 
     def create
       @team = @division.teams.create(team_params)
-      division_team_response
     end
 
     def show
-      division_team_response
     end
 
     def update
       @team.update(team_params)
-      division_team_response
     end
 
     def destroy
@@ -35,7 +32,7 @@ module Api
     end
 
     def find_division
-      @division = Division.find(params[:division_id])
+      @division = Division.find_by(params[:division_id])
     end
 
     def find_division_team

@@ -28,7 +28,7 @@ module Api
       @team = Team.new
       @division = Division.find(params[:id])
       @teams = @division.teams
-      respond_with(Division.find_by(params[:division_id]))
+      respond_with(@division)
     end
 
     def destroy
