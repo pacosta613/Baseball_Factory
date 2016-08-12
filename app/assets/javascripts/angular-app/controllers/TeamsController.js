@@ -5,9 +5,11 @@ function TeamsController(Team, Teams, $location, $state, $stateParams) {
   ctrl.allTeams = Teams.query();
   ctrl.team = Team.get({id: $stateParams.id});
 
+  console.log($stateParams)
+
   ctrl.addTeam = function(){
     ctrl.newTeam.$save(function(){
-      $location.path('teams');
+      ctrl.allTeams = Teams.query()
     });
   };
 

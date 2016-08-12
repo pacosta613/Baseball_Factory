@@ -12,10 +12,16 @@ function DivisionsController(Division, $location, $state, $stateParams, Team) {
   };
     
   ctrl.addDivision = function() {
+
     ctrl.newDivision.$save(function() {
-      $location.path('divisions');
+      ctrl.divisions = Division.query();
     });
+
   };
+
+  // ctrl.getDivisions = function() {
+  //   ctrl.divisions = Division.query()
+  // }
 
   ctrl.editDivision = function(){
     ctrl.division.$update(function(){

@@ -1,3 +1,7 @@
+body {
+  height: 3000px;
+}
+
 .division-active {
   text-decoration: none;
   color: white;
@@ -25,8 +29,9 @@
 }
 
 .footer {
-  position: absolute;
+  display: none;
   bottom: 0;
+  right: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 80px;

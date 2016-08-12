@@ -22,6 +22,16 @@ angular
         templateUrl: 'division/show.html',
         controller: "DivisionsController as ctrl"
      })
+     .state("league.division.teams",{
+        url: 'division/:id/:teams', 
+        templateUrl: 'teams.html',
+        controller: "TeamsController as ctrl"
+     })
+     .state("league.division.team", {
+        url: 'team/:id', 
+        templateUrl: 'team.show',
+        controller: 'TeamsController as ctrl'
+     })
      .state("league.edit", {
         url: 'edit/:id',
         templateUrl: 'division/edit.html',
