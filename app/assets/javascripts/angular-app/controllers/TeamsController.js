@@ -1,7 +1,8 @@
-function TeamsController(Team, Teams, $location, $state, $stateParams) {
+function TeamsController(Team, Teams, Player, $location, $state, $stateParams) {
   var ctrl = this; 
   ctrl.teams = Team.query();
   ctrl.newTeam = new Team();
+  ctrl.player = new Player();
   ctrl.allTeams = Teams.query();
   ctrl.team = Team.get({id: $stateParams.id});
 
@@ -24,6 +25,17 @@ function TeamsController(Team, Teams, $location, $state, $stateParams) {
       $state.go($state.current, {}, {reload:true});
     });
   };
+
+  ctrl.addPlayer = function(player, team) {
+    player.team_id = team.id;
+
+    player.$save(function(result){
+      console.log(result)
+    });
+    ctrl.player = new Player();
+    $state.go($state.current, {}, {reload: true});
+  };
+  
 };
 
 angular 
