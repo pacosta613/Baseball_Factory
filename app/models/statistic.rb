@@ -1,6 +1,4 @@
 class Statistic < ActiveRecord::Base
-  attr_accessible :player_id, :team_id, :games, :at_bats, :runs, :homeruns, :hits, :singles, :doubles, :triples, :rbis, :stolen_bases, :caught_stealing
-
   belongs_to :player
   belongs_to :team
 

@@ -3,14 +3,12 @@ function TeamsController(Team, Teams, Player, $location, $state, $stateParams) {
   ctrl.teams = Team.query();
   ctrl.newTeam = new Team();
   ctrl.player = new Player();
-  ctrl.allTeams = Teams.query();
+  ctrl.allTeams = Team.query();
   ctrl.team = Team.get({id: $stateParams.id});
-
-  console.log($stateParams)
 
   ctrl.addTeam = function(){
     ctrl.newTeam.$save(function(){
-      ctrl.allTeams = Teams.query()
+      ctrl.teams = Team.query()
     });
   };
 

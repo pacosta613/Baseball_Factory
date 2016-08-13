@@ -1,18 +1,12 @@
 module Api
   
   class TeamsController < ApplicationController
-    before_action :find_division, except: [:create]
-    before_action :find_division_team, only: [:show, :update, :destroy]
+    before_action :find_division, except: [:create, :show]
+    #before_action :find_division_team, only: [:show, :update, :destroy]
     #before_action :division_team_response, except: [:index]
 
     def index
-      if params[:division_id]
-        @division = Division.find(:division_id)
-        @teams = @division.teams  
-        respond_with @division, @teams
-      else
-        respond_with(Team.all)
-      end
+      respond_with(Team.all)
     end
 
     def create
@@ -22,15 +16,20 @@ module Api
     end
 
     def show
-      respond_with @division, @team
+      respond_with(Team.find(params[:id]))
+      #@division = Division.find(params[:division_id])
+      #@team = @division.teams.find(params[:id])
+      #respond_with @division, @team
     end
 
     def update
+      @team = Team.find(params[:id])
       @team.update(team_params)
-      respond_with @division, @team
+      respond_with @team
     end
 
     def destroy
+      @team = Team.find(params[:id])
       respond_with @team.destroy
     end
 

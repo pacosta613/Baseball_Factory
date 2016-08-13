@@ -4,9 +4,7 @@ module Api
     
     def index
       binding.pry
-      @team = Team.find(params[:team_id])
-      @players = @team.players 
-      respond_with @team, @players
+      respond_with(Player.all)
     end
     
 

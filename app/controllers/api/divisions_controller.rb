@@ -25,10 +25,8 @@ module Api
     end
 
     def show
-      binding.pry
-      @team = Team.new
       @division = Division.find(params[:id])
-      @teams = @division.teams
+      @division.teams
       respond_with(@division)
     end
 

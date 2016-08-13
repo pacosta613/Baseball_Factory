@@ -1,12 +1,11 @@
 function Team($resource) {
-
-  var Team = $resource('http://localhost:3000/api/divisions/:division_id/teams'
-, {division_id: '@division_id'}, {
+  
+  var Team = $resource('http://localhost:3000/api/teams/:id.json', {id: '@id'}, {
     update: { method: 'PUT' }
   });
   return Team; 
 }
 
-angular
+angular 
   .module('app')
-  .factory('Team', Team);
+  .factory('Team', Team)

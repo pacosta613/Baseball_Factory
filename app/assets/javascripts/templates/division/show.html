@@ -4,10 +4,9 @@
 <a class="division-active" href="#" ng-click="ctrl.deleteDivision(ctrl.division)">Delete Division</a> 
 
 <h2>Teams</h2>
-
 <ul class="list">
   <li ng-repeat="team in ctrl.division.teams">
-    <a href="#!" ui-sref="league.team({id: team.id})">{{team.name}}</a>
+    <a href="#" ui-sref="league.team({id: team.id})">{{team.name}}</a>
   </li>
 </ul>
 
