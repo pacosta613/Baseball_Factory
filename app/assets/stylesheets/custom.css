@@ -1,5 +1,23 @@
-body {
-  height: 3000px;
+.navbar navbar-default{
+  position: absolute;
+  width: 100%;
+}
+/*
+.container {
+  position: fixed;
+}
+#body {
+  position: fixed;
+  height: 100%;
+}
+*/ 
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+  background-color: black;
 }
 
 .division-active {
@@ -26,16 +44,6 @@ body {
 
 .flatback {
   background-color: white;
-}
-
-.footer {
-  display: none;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 80px;
-  background-color: black;
 }
 
 small {
