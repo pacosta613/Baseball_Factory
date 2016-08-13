@@ -47,6 +47,26 @@ angular
       templateUrl: 'team/show.html',
       controller: 'TeamsController as ctrl'
      })
+     .state('league.players', {
+      url: "players",
+      templateUrl: 'player/players.html',
+      controller: 'PlayersController as ctrl'
+     })
+     .state('league.player', {
+      url: 'player',
+      templateUrl: 'player/show.html',
+      controller: 'PlayersController as ctrl'
+     })
+     .state('league.new-player', {
+      url: 'new-player',
+      templateUrl: 'player/new.html',
+      controller: 'PlayersController as ctrl'
+     })
+     .state('league.edit-player', {
+      url: 'edit-player',
+      templateUrl: 'player/edit.html',
+      controller: 'PlayersController as ctrl'
+     })
      .state('league.about', {
       url: 'about',
       templateUrl: 'about/about.html'
