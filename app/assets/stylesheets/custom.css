@@ -41,6 +41,15 @@
 .list {
   padding: 0px;
 }
+.list_division {
+  padding: 0px;
+  margin: 0;
+}
+.list_division li{
+  display: inline-block;
+  color: black;
+  margin: 0px 5px;
+}
 
 .flatback {
   background-color: white;

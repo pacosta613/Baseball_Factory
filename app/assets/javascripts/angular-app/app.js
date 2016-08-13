@@ -5,7 +5,7 @@ angular
      .state("league", {
        url: "/",
        templateUrl: "home.html",
-       controller: "LeagueController as ctrl"
+       controller: "DivisionsController as ctrl"
      })
      .state("league.new", {
        url: "new",

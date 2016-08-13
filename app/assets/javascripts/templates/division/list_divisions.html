@@ -1,5 +1,5 @@
-<ul class="list">
-  <li ng-repeat="division in ctrl.divisions">
-    <h4> {{division.name}} </h4>
+<ul class="list_division">
+  <li class="lists_divisions" ng-repeat="division in ctrl.divisions">
+    <a href="#" ui-sref="league.division({id: division.id})"><h4> {{division.name}}</h4></a>
     </li>
-  </ul>
+</ul>
