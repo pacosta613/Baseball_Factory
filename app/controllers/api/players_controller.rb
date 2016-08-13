@@ -3,10 +3,12 @@ module Api
   class PlayersController < ApplicationController
     
     def index
+      binding.pry
       @team = Team.find(params[:team_id])
       @players = @team.players 
       respond_with @team, @players
     end
+    
 
     def create
       @player = Player.new(player_params)

@@ -25,6 +25,7 @@ module Api
     end
 
     def show
+      binding.pry
       @team = Team.new
       @division = Division.find(params[:id])
       @teams = @division.teams
