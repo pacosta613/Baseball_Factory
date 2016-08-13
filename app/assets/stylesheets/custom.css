@@ -1,6 +1,7 @@
-.navbar navbar-default{
+.navbar {
   position: absolute;
   width: 100%;
+  color: #BDB76B;
 }
 /*
 .container {
@@ -47,10 +48,11 @@
 }
 .list_division li{
   display: inline-block;
-  color: black;
   margin: 0px 5px;
 }
-
+.list_division h4 {
+  color: #006400;
+}
 .flatback {
   background-color: white;
 }
