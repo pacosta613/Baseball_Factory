@@ -1,7 +1,9 @@
 <h2>Teams</h2>
 
+<input ng-model="search.name" placeholder="Team Name" />
+
 <ul class="list">
-  <li ng-repeat="team in ctrl.allTeams">
+  <li ng-repeat="team in ctrl.allTeams | filter:search">
     <h4> {{team.name}} </h4>
     <a class="team-active" href="#" ui-sref="league.team({id: team.id})">View Team</a>
     <a class="team-active" href="#" ui-sref="league.edit-team({id: team.id})">Edit Team</a>

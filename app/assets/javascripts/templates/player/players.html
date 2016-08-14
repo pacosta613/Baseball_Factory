@@ -1,7 +1,10 @@
-<h2>Players</h2>
+<h2>Players</h2> 
+
+<input ng-model="search.first_name" placeholder="First Name" /><br>
+<input ng-model="search.position" placeholder="Position" />
 
 <ul class="list">
-  <li ng-repeat="player in ctrl.allPlayers">
+  <li ng-repeat="player in ctrl.allPlayers | filter:search">
     <h4> {{player.first_name}} {{player.last_name}} - {{player.position}} </h4>
     <a class="player-active" href="#" ui-sref="league.player({id: player.id})">View Player</a>
     <a class="player-active" href="#" ui-sref="league.edit-player({id: player.id})">Edit Player</a>
