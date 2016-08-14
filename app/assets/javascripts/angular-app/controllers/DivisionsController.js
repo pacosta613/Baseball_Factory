@@ -5,18 +5,17 @@ function DivisionsController(Division, $location, $state, $stateParams, Team) {
   ctrl.team = new Team();
   ctrl.division = Division.get({id: $stateParams.id});
 
+  ctrl.addDivision = function() {
+    ctrl.newDivision.$save(function() {
+      $location.path('divisions');
+    });
+    $state.go($state.current, {}, {reload:true});
+  };
+
   ctrl.deleteDivision = function(division){
     division.$delete(function(){
       $state.go($state.current, {}, {reload:true});
     });
-  };
-    
-  ctrl.addDivision = function() {
-
-    ctrl.newDivision.$save(function() {
-      ctrl.divisions = Division.query();
-    });
-
   };
 
   // ctrl.getDivisions = function() {

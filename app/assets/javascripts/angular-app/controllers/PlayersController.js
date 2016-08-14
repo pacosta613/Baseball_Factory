@@ -2,12 +2,12 @@ function PlayersController(Players, Player, $location, $state, $stateParams) {
   var ctrl = this;
   ctrl.players = Player.query();
   ctrl.newPlayer = new Player();
-  ctrl.allPlayers = Players.query();
+  ctrl.allPlayers = Player.query();
   ctrl.player = Player.get({id: $stateParams.id});
 
   ctrl.addPlayer = function(){
     ctrl.newPlayer.$save(function(){
-      ctrl.allPlayers = Players.query()
+      $location.path('players')
     });
   };
 

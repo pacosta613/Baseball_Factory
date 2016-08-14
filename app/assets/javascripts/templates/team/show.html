@@ -1,4 +1,21 @@
 <h3>{{ ctrl.team.name }}</h3>
-
-<a class="team-active" href="#" ui-sref="league.edit-team({id: ctrl.team.id})">Edit team</a>
+<a class="player-active" href="#" ui-sref="league.new-player({id: ctrl.player.id})">Add Player</a>
+<a class="team-active" href="#" ui-sref="league.edit-team({id: ctrl.team.id})">Edit Team</a>
 <a class="team-active" href="#" ng-click="ctrl.deleteTeam(ctrl.team)">Delete Team</a> 
+
+<h2>Players</h2>
+<ul class="list">
+  <li ng-repeat="player in ctrl.team.players">
+    <a href="#" ui-sref="league.player({id: player.id})"><h4>{{player.first_name}} {{player.last_name}}</h4></a>
+  </li>
+</ul>
+
+<h1>Create Player</h1>
+<form validate ng-submit="ctrl.addPlayer(ctrl.player, ctrl.team)" class="add-players">
+   <label>First Name</label> <input type="text" ng-model="ctrl.newPlayer.first_name"><br>
+   <label>Last Name</label> <input type="text" ng-model="ctrl.newPlayer.last_name"><br>
+   <label>Position</label> <input type="text" ng-model="ctrl.newPlayer.position"><br>
+   <label>Jersey Number</label> <input type="text" ng-model="ctrl.newPlayer.jersey_number"><br>
+
+   <input type="submit" value="Add Player">
+</form>

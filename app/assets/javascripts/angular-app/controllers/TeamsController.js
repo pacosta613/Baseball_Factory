@@ -26,7 +26,6 @@ function TeamsController(Team, Teams, Player, $location, $state, $stateParams) {
 
   ctrl.addPlayer = function(player, team) {
     player.team_id = team.id;
-
     player.$save(function(result){
       console.log(result)
     });

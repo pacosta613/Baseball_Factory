@@ -35,6 +35,13 @@
   text-decoration: none;
   color: white;
 }
+.player-active {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  background-color: green;
+  border: solid 2px black;
+}
 .active {
   background-color: blue;
 }
@@ -55,6 +62,10 @@
 }
 .flatback {
   background-color: white;
+}
+.add-players {
+  display: inline-block;
+  text-align: right;
 }
 
 small {
