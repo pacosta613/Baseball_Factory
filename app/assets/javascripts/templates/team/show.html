@@ -12,10 +12,10 @@
 
 <h1>Create Player</h1>
 <form validate ng-submit="ctrl.addPlayer(ctrl.player, ctrl.team)" class="add-players">
-   <label>First Name</label> <input type="text" ng-model="ctrl.newPlayer.first_name"><br>
-   <label>Last Name</label> <input type="text" ng-model="ctrl.newPlayer.last_name"><br>
-   <label>Position</label> <input type="text" ng-model="ctrl.newPlayer.position"><br>
-   <label>Jersey Number</label> <input type="text" ng-model="ctrl.newPlayer.jersey_number"><br>
+   <label>First Name</label> <input type="text" ng-model="ctrl.player.first_name"><br>
+   <label>Last Name</label> <input type="text" ng-model="ctrl.player.last_name"><br>
+   <label>Position</label> <input type="text" ng-model="ctrl.player.position"><br>
+   <label>Jersey Number</label> <input type="text" ng-model="ctrl.player.jersey_number"><br>
 
    <input type="submit" value="Add Player">
 </form>
