@@ -12,11 +12,20 @@
 
 <h1>Create Player</h1>
 <form validate ng-submit="ctrl.addPlayer(ctrl.player, ctrl.team)" class="add-players" name="form">
-   <label>First Name</label> <input type="text" ng-model="ctrl.player.first_name" required="required" name="first_name"><div ng-if="form.first_name.$touched && form.first_name.$error.required">First name is required!</div><br> 
+   <label>First Name</label> <input type="text" ng-model="ctrl.player.first_name" required="required" name="first_name">
+   <div ng-messages="form.first_name.$error" ng-if="form.first_name.$touched">
+     <div ng-message="required">First name is required</div>
+   </div><br> 
 
-   <label>Last Name</label> <input type="text" ng-model="ctrl.player.last_name" required="required" name="last_name"><div ng-if="form.last_name.$touched && form.last_name.$error.required">Last name is required!</div><br>
+   <label>Last Name</label> <input type="text" ng-model="ctrl.player.last_name" required="required" name="last_name">
+   <div ng-messages="form.last_name.$error" ng-if="form.last_name.$touched">
+     <div ng-message="required">Last name is required</div>
+   </div><br>
 
-   <label>Position</label> <input type="text" ng-model="ctrl.player.position" required="required" name="position"><div ng-if="form.position.$touched && form.position.$error.required">Position is required!</div><br>
+   <label>Position</label> <input type="text" ng-model="ctrl.player.position" required="required" name="position">
+   <div ng-messages="form.position.$error" ng-if="form.position.$touched">
+     <div ng-message="required">Position is required</div>
+   </div><br>
 
    <label>Jersey Number</label> <input type="text" ng-model="ctrl.player.jersey_number"><br>
 
