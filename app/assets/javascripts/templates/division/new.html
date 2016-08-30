@@ -1,8 +1,11 @@
 <h1>Create Division</h1>
 
-<form validate ng-submit="ctrl.addDivision()">
+<form validate ng-submit="ctrl.addDivision()" name="form">
    <label>Division</label>
-   <input type="text" ng-model="ctrl.newDivision.name">
+   <input type="text" ng-model="ctrl.newDivision.name" required="required" name="division">
+   <div ng-if="form.division.$touched && form.division.$error.required">
+        Division name is required!
+    </div>
 
    <input type="submit" value="Add Division">
 </form>

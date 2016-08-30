@@ -12,9 +12,13 @@
 
 <h1>Create Team</h1>
 
-<form validate ng-submit="ctrl.addTeam(ctrl.team, ctrl.division)">
+<form validate ng-submit="ctrl.addTeam(ctrl.team, ctrl.division)" name="form">
    <label>Team</label>
-   <input type="text" ng-model="ctrl.team.name">
+   <input type="text" ng-model="ctrl.team.name" required="required" name="team">
+
+   <div ng-if="form.team.$touched && form.team.$error.required">
+        Team name is required!
+    </div>
 
    <input type="submit" value="Add Team">
 </form>

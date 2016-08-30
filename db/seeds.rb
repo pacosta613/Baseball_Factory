@@ -30,7 +30,7 @@ manny = Player.create(first_name: 'Manny', last_name: 'Rameriz', position: 'Left
 david = Player.create(first_name: 'David', last_name: 'Ortiz', position: 'DH', team_id: 5, jersey_number: 35)
 pedro_martinez = Player.create(first_name: 'Pedro', last_name: 'Martinez', position: 'P', team_id: 6, jersey_number: 45)
 
-
+#create stats
 
 
 
