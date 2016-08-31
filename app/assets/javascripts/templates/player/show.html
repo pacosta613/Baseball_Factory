@@ -1,4 +1,16 @@
 <h3>{{ ctrl.player.first_name }} {{ ctrl.player.last_name }}</h3>
 
 <a class="player-active" href="#" ui-sref="league.edit-player({id: ctrl.player.id})">Edit Player</a>
-<a class="player-active" href="#" ng-click="ctrl.deletePlayer(ctrl.player)">Delete Player</a> 
+<a class="player-active" href="#" ng-click="ctrl.deletePlayer(ctrl.player)">Delete Player</a><br><br><br> 
+
+<form name="form" class="add-stats">
+
+  <label>Hits</label><input type="text" name="hits" ng-model="ctrl.hits"/><br>
+  <label>Homeruns</label><input type="text" name="homeruns" ng-model="ctrl.homeruns"/><br>
+
+  <input type="submit" value="Add Stats">
+</form>
+
+<p> {{ctrl.player.hits }} </p>
+<p> {{ctrl.player.homeruns}} </p>
+<p> {{ctrl.player.batting_average}} </p>

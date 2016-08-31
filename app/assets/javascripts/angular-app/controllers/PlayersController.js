@@ -1,4 +1,4 @@
-function PlayersController(Players, Player, $location, $state, $stateParams) {
+function PlayersController(Players, Player, $location, $state, $stateParams, $scope) {
   var ctrl = this;
   ctrl.players = Player.query();
   ctrl.newPlayer = new Player();
@@ -22,6 +22,14 @@ function PlayersController(Players, Player, $location, $state, $stateParams) {
       $state.go($state.current, {}, {reload: true});
     });
   };
+
+  ctrl.addStats = function(){
+    ctrl.player.$save(function(){
+      debugger
+      
+      $location.path('players')
+    });
+  }
 }
 
 angular

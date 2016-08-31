@@ -67,6 +67,10 @@
   display: inline-block;
   text-align: right;
 }
+.add-stats {
+  display: inline-block;
+  text-align: right;
+}
 
 small {
   color: white;
