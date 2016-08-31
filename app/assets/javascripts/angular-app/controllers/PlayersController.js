@@ -1,8 +1,10 @@
 function PlayersController(Players, Player, $location, $state, $stateParams, $scope) {
   var ctrl = this;
-  ctrl.players = Player.query();
+  ctrl.addStats = new Stat();
   ctrl.newPlayer = new Player();
+  ctrl.players = Player.query();
   ctrl.allPlayers = Player.query();
+  ctrl.allStats = Stat.query();
   ctrl.player = Player.get({id: $stateParams.id});
 
   ctrl.addPlayer = function(){
@@ -25,7 +27,7 @@ function PlayersController(Players, Player, $location, $state, $stateParams, $sc
 
   ctrl.addStats = function(){
     ctrl.player.$save(function(){
-      debugger
+      
       
       $location.path('players')
     });

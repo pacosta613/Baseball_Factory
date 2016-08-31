@@ -3,7 +3,7 @@
 <a class="player-active" href="#" ui-sref="league.edit-player({id: ctrl.player.id})">Edit Player</a>
 <a class="player-active" href="#" ng-click="ctrl.deletePlayer(ctrl.player)">Delete Player</a><br><br><br> 
 
-<form name="form" class="add-stats">
+<form name="form" class="add-stats" validate ng-submit="ctrl.addStats()">
 
   <label>Hits</label><input type="text" name="hits" ng-model="ctrl.hits"/><br>
   <label>Homeruns</label><input type="text" name="homeruns" ng-model="ctrl.homeruns"/><br>
